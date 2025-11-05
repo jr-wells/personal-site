@@ -39,6 +39,7 @@ body {
   color: #2f2f2f;
   line-height: 1.7;
 }
+
 header {
   background: #1e1e1e;
   color: #fff;
@@ -46,12 +47,14 @@ header {
   position: sticky;
   top: 0;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: "Georgia", serif;
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -61,40 +64,90 @@ a {
 
 a:hover {
   font-style: italic;
-  color: #1e1e1e;
+  color: #6e5151;
 }
+
 nav a {
   margin-left: 1rem;
   font-size: 0.95rem;
   font-variant: small-caps;
   letter-spacing: 0.04em;
 }
+
 .photo-band {
   display: flex;
   overflow: hidden;
 }
+
 .photo-band img {
   width: 25%;
   height: auto;
   object-fit: cover;
   filter: contrast(1.08) saturate(1.12) brightness(0.97);
 }
+
 .section {
   padding: 3.5rem 2rem;
   max-width: 740px;
   margin: auto;
 }
+
+#about a {
+  color: #6e5151;              /* warm accent */
+  text-decoration: underline;
+  text-decoration-color: #d6b483; /* subtle gold underline */
+  text-underline-offset: 3px;
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+#about a:hover {
+  color: #b3824a;
+  text-decoration-color: #b3824a;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
+
 .project-card {
-  background: #fff;
+  background: #fffdf9;
   padding: 1.25rem;
-  border-radius: 6px;
-  border: 1px solid #d6d1c7;
+  border-radius: 8px;
+  border: 1px solid #e0d8c7;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.project-card a {
+  color: #6e5151;
+  font-weight: 500;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  background: #fefbf7;
+}
+
+.project-card h3 {
+  border-left: 4px solid #d6b483; /* warm gold accent */
+  padding-left: 0.6rem;
+}
+
+.project-card:nth-child(2) h3 {
+  border-color: #a0b8c2; /* cool blue-gray */
+}
+
+.project-card:nth-child(3) h3 {
+  border-color: #b49aa3; /* muted mauve */
+}
+
 footer {
   text-align: center;
   padding: 2rem;
